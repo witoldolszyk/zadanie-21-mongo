@@ -154,3 +154,8 @@ Promise.all([kenny.save(), mark.save(), benny.save()])
     .then(findKennyAndDelete)
     .then(findBennyAndRemove)
     .catch(console.log.bind(console))
+
+    // Response
+app.get('/', (req, res) => res.send('hello heroku'));
+
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
