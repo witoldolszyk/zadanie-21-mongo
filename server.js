@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
+const express = require('express');
 const Schema = mongoose.Schema;
+const app = express();
+const PORT = process.env.PORT || 5000;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://witoldolszyk@gmail.com:Bama!@#123@ds237489.mlab.com:37489/nodeappdatabase', {
@@ -156,11 +159,8 @@ Promise.all([kenny.save(), mark.save(), benny.save()])
     .catch(console.log.bind(console))
 
     // Response
-    // Response
-const PORT = process.env.PORT || 5000
 
-const express = require('express')
-const app = express()
+
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.listen(PORT, () => console.log('Example app listening on port 3000!'))
